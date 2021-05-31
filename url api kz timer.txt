@@ -1,0 +1,5 @@
+api 1:
+	https://kztimerglobal.com/swagger/index.html?urls.primaryName=V2
+
+api 2:
+	http://kzgo.eu:5000/api/maps
