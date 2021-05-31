@@ -964,5 +964,4 @@ const maps = [
 		tier: 4,
 	},
 ]
-
 export default maps;

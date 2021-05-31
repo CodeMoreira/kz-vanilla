@@ -96,10 +96,11 @@ const Home = () => {
     <Container>
       <ProfileContainer>
         <Text size='30px'>KZ Vanilla</Text>
-        <Button onClick={() => window.open('https://steamid.xyz')}>
-          <Text size='15px'>Encontrar meu Steam Id</Text>
-        </Button>
-        <SearchPlayer placeholder='Steam ID' value={steamId} onChange={e => setSteamId(e.target.value)}/>
+        <Text size='14px' color='#f80530'>**NÃO SEJA USUÁRIO DE STRAFE BOLA**</Text>
+        <SelectContainer>
+          <SearchPlayer placeholder='Steam ID' value={steamId} onChange={e => setSteamId(e.target.value)}/>
+          <Text size='15px' onClick={() => window.open('https://csgopedia.com/steam-id-finder/')} style={{cursor: 'pointer'}}>Meu Steam Id</Text>
+        </SelectContainer>
         <Button onClick={() => handleSearch()}>
           <Text>Pesquisar Player</Text>
         </Button>
@@ -132,8 +133,16 @@ const Home = () => {
                 <Button marginLeft='10px' onClick={() => setSelectTierMap(5)}>
                   <Text>5</Text>
                 </Button>
+                <Button marginLeft='10px' onClick={() => setSelectTierMap(6)}>
+                  <Text>6</Text>
+                </Button>
+                <Button marginLeft='10px' onClick={() => setSelectTierMap(7)}>
+                  <Text>7</Text>
+                </Button>
               </SelectTierContainer>
-              <Text><strong>{searchResult && steamUserName}</strong> zerou {totalMapas} mapas.</Text>
+              <Text><strong>{searchResult && steamUserName}</strong></Text>
+              <Text>zerou {totalMapas} mapas.</Text>
+              <Text>faltam {411 - totalMapas} mapas.</Text>
               <Select/>
             </>
           )
